@@ -33,7 +33,7 @@ public class Order {
      */
     public void removeItem(int index){
         //edit starts here
-        items.remove(index); //done
+        this.items.remove(index); //done
         //edit ends here
     }
 
@@ -44,8 +44,11 @@ public class Order {
      */
     public double getTotalQuantity() {
         //edit starts here
-        return getTotalQuantity();  //done
-
+        double total=0;
+        for (int i=0; i<this.items.size(); i++){
+            total += items.get(i).getQuantity();
+        }
+        return total;
         //edit ends here
     }
 
@@ -55,8 +58,11 @@ public class Order {
      */
     public double getGrandTotal() {
         //edit starts here
-        double value = items.size();
-        return value; //done
+        double grandTotal=0;
+        for (int i=0; i<items.size();i++){
+            grandTotal += items.get(i).getAmount();
+        }
+        return grandTotal;
         //edit ends here
     }
 }

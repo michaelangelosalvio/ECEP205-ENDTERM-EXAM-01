@@ -21,7 +21,7 @@ public class Item {
     }
 
     public void setProduct(Product product) { //done
-        this.product = product;
+
 
         //2. Compute amount when the quantity changes
         //Edit starts here
@@ -41,11 +41,9 @@ public class Item {
     }
 
     public void setQuantity(double quantity) { //done
-        this.quantity = quantity;
 
         //3. Compute amount when the quantity changes
         //Edit starts here
-
         this.quantity = quantity;
         Order orderlist = new Order();
         this.amount =  this.quantity - orderlist.getTotalQuantity();
