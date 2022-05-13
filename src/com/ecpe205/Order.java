@@ -10,6 +10,7 @@ public class Order {
     }
 
     public ArrayList<Item> getItems() {
+
         return items;
     }
 
@@ -20,7 +21,8 @@ public class Order {
      */
     public void addItem(Product product, double quantity) {
         //edit starts here
-
+        Item item_data = new Item(new Product("001", "Jackfruit", 10.0), 3);
+        items.add(item_data); //done
         //edit ends here
     }
 
@@ -31,7 +33,7 @@ public class Order {
      */
     public void removeItem(int index){
         //edit starts here
-
+        items.remove(index); //done
         //edit ends here
     }
 
@@ -42,7 +44,8 @@ public class Order {
      */
     public double getTotalQuantity() {
         //edit starts here
-        return 0; //please remove
+        return getTotalQuantity();  //done
+
         //edit ends here
     }
 
@@ -52,7 +55,8 @@ public class Order {
      */
     public double getGrandTotal() {
         //edit starts here
-        return 0; //please remove
+        double value = items.size();
+        return value; //done
         //edit ends here
     }
 }
