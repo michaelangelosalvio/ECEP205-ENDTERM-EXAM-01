@@ -1,3 +1,4 @@
+
 package com.ecpe205;
 
 import org.junit.jupiter.api.BeforeAll;
@@ -12,22 +13,22 @@ class OrderTest {
     @BeforeAll
     void setup(){
         order = new Order();
-        order.addItem(new Product("111110","bacon",55),10);
-        order.addItem(new Product("111100","egg",10),5);
-        order.addItem(new Product("111000","hotdog",12),8);
-        order.addItem(new Product("110000","ham",45),12);
-        order.addItem(new Product("100000","fish",40),3);
+        order.addItem(new Product("00001","Mil0",6),2);
+        order.addItem(new Product("00002","Noodles",7),5);
+        order.addItem(new Product("00003","Ballpen",20),1);
+        order.addItem(new Product("00004","Coffee",8),6);
+        order.addItem(new Product("00005","Tissue",24),5);
     }
 
     @Test
     void add5Items(){
-        order.addItem(new Product("222220","shampoo",18),13);
-        order.addItem(new Product("222200","soap",15),6);
-        order.addItem(new Product("222000","conditioner",20),4);
-        order.addItem(new Product("220000","powder",16),2);
-        order.addItem(new Product("200000","lotion",25),14);
-        assertEquals(77,order.getTotalQuantity());
-        assertEquals(2142,order.getGrandTotal());
+        order.addItem(new Product("00006","Toothbrush",75),2);
+        order.addItem(new Product("00007","Toothpaste",102),2);
+        order.addItem(new Product("00008","Sugar",30),1);
+        order.addItem(new Product("00009","Eggs",7),12);
+        order.addItem(new Product("00010","Chips",15),4);
+        assertEquals(21,order.getTotalQuantity());
+        assertEquals(528,order.getGrandTotal());
 
     }
 
@@ -36,8 +37,8 @@ class OrderTest {
         for (int i = order.getItems().size(); i<5; i--){
             order.removeItem(i);
         }
-        assertEquals(38,order.getTotalQuantity());
-        assertEquals(1356,order.getGrandTotal());
+        assertEquals(21,order.getTotalQuantity());
+        assertEquals(528,order.getGrandTotal());
     }
 
 
@@ -47,18 +48,18 @@ class OrderTest {
         Order order = new Order();
 
         //1.
-        order.addItem(new Product("111110","bacon",55),10);
-        assertEquals(550,order.getItems().get(0).getAmount());
+        order.addItem(new Product("00001","Milo",6),2);
+        assertEquals(12,order.getItems().get(0).getAmount());
 
         //2.
-        order.addItem(new Product("111110","bacon",55),10);
-        order.getItems().get(1).setProduct(new Product("111100", "egg", 10));
-        assertEquals(100,order.getItems().get(1).getAmount());
+        order.addItem(new Product("00002","Noodles",7),5);
+        order.getItems().get(1).setProduct(new Product("111100", "egg", 7));
+        assertEquals(35,order.getItems().get(1).getAmount());
 
         //3.
-        order.addItem(new Product("111000","hotdog",12),5);
-        order.getItems().get(2).setQuantity(10);
-        assertEquals(10,order.getItems().get(2).getQuantity());
+        order.addItem(new Product("00003","Ballpen",20),1);
+        order.getItems().get(1).setQuantity(7);
+        assertEquals(20,order.getItems().get(2).getQuantity());
 
     }
 }
