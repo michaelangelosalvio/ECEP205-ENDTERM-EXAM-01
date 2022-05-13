@@ -10,7 +10,7 @@ public class Item {
 
         //1. Compute for the amount based on the price of the product multiply with quantity
         //Edit starts here
-        //this.amount =
+        this.amount = getProduct().getPrice() * this.quantity;
         //Edit ends here
     }
 
@@ -20,10 +20,10 @@ public class Item {
 
     public void setProduct(Product product) {
         this.product = product;
-
+        Order order = new Order();
         //2. Compute amount when the quantity changes
         //Edit starts here
-        //this.amount =
+        this.amount =  getQuantity() - order.getTotalQuantity();
         //Edit ends here
     }
 
@@ -33,10 +33,10 @@ public class Item {
 
     public void setQuantity(double quantity) {
         this.quantity = quantity;
-
+        Order order = new Order();
         //3. Compute amount when the quantity changes
         //Edit starts here
-        //this.amount =
+        this.amount =  this.quantity - order.getTotalQuantity();
         //Edit ends here
     }
 
