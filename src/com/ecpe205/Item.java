@@ -2,11 +2,17 @@ package com.ecpe205;
 
 public class Item {
     private Product product;
-    private double quantity, amount;
+    private double quantity, amount, price;
 
-    public Item(Product product, double quantity) {
+    public Item(Product product, double quantity, double amount, double price) {
         this.product = product;
         this.quantity = quantity;
+        this.amount = amount;
+        this.price=price;
+        price=product * quantity;
+
+
+
 
         //1. Compute for the amount based on the price of the product multiply with quantity
         //Edit starts here
