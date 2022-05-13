@@ -44,7 +44,7 @@ public class Order {
         //edit starts here
         double total=0;
         for (int i=0; i<this.items.size(); i++){
-            total += items.get(i).quantity;
+            total += items.get(i).getQuantity();
         }
         return total;
         //edit ends here
@@ -58,7 +58,7 @@ public class Order {
         //edit starts here
         double grandTotal=0;
         for (int i=0; i<items.size();i++){
-            grandTotal += items.get(i).amounts;
+            grandTotal += items.get(i).getAmount();
         }
         return grandTotal;
         //edit ends here
