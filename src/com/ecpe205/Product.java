@@ -1,3 +1,8 @@
+/*
+Kristel C. Casalda  ENCE4A
+GitHub Link: https://github.com/C-Kristel/ECEP205-ENDTERM-EXAM-01.git
+ */
+
 package com.ecpe205;
 
 public class Product {

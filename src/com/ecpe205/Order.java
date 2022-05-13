@@ -1,5 +1,9 @@
-package com.ecpe205;
+/*
+Kristel C. Casalda  ENCE4A
+GitHub Link: https://github.com/C-Kristel/ECEP205-ENDTERM-EXAM-01.git
+ */
 
+package com.ecpe205;
 import java.util.ArrayList;
 
 public class Order {
@@ -20,7 +24,8 @@ public class Order {
      */
     public void addItem(Product product, double quantity) {
         //edit starts here
-
+        Item newProduct = new Item(new Product("00001", "Milo", 6.00), 5);
+        items.add(newProduct);
         //edit ends here
     }
 
@@ -31,7 +36,7 @@ public class Order {
      */
     public void removeItem(int index){
         //edit starts here
-
+        items.remove(index);
         //edit ends here
     }
 
@@ -42,7 +47,7 @@ public class Order {
      */
     public double getTotalQuantity() {
         //edit starts here
-        return 0; //please remove
+        return getTotalQuantity();
         //edit ends here
     }
 
@@ -52,7 +57,8 @@ public class Order {
      */
     public double getGrandTotal() {
         //edit starts here
-        return 0; //please remove
+        double grandTotal = items.size();
+        return grandTotal;
         //edit ends here
     }
 }

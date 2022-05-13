@@ -1,3 +1,8 @@
+/*
+Kristel C. Casalda  ENCE4A
+GitHub Link: https://github.com/C-Kristel/ECEP205-ENDTERM-EXAM-01.git
+ */
+
 package com.ecpe205;
 
 public class Item {
@@ -10,8 +15,12 @@ public class Item {
 
         //1. Compute for the amount based on the price of the product multiply with quantity
         //Edit starts here
-        //this.amount =
+        this.amount = quantity * getProduct().getPrice();
         //Edit ends here
+    }
+
+    public Item() {
+        
     }
 
     public Product getProduct() {
@@ -19,11 +28,13 @@ public class Item {
     }
 
     public void setProduct(Product product) {
+        Order order = new Order();
         this.product = product;
 
         //2. Compute amount when the quantity changes
         //Edit starts here
-        //this.amount =
+
+        this.amount = getQuantity() - order.getTotalQuantity();
         //Edit ends here
     }
 
@@ -33,10 +44,11 @@ public class Item {
 
     public void setQuantity(double quantity) {
         this.quantity = quantity;
+        Order order = new Order();
 
         //3. Compute amount when the quantity changes
         //Edit starts here
-        //this.amount =
+        this.amount = getQuantity() * order.getTotalQuantity();
         //Edit ends here
     }
 
