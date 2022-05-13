@@ -20,6 +20,7 @@ public class Item {
 
     public void setProduct(Product product) {
         this.product = product;
+        this.amount=product.getPrice()*this.quantity;
 
         //2. Compute amount when the quantity changes
         //Edit starts here
@@ -33,6 +34,7 @@ public class Item {
 
     public void setQuantity(double quantity) {
         this.quantity = quantity;
+        this.amount = this.product.getPrice()*quantity;
 
         //3. Compute amount when the quantity changes
         //Edit starts here
