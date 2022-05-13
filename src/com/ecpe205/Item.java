@@ -19,6 +19,10 @@ public class Item {
         //Edit ends here
     }
 
+    public Item() {
+        
+    }
+
     public Product getProduct() {
         return product;
     }
