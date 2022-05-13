@@ -47,10 +47,10 @@ public class Order {
      */
     public double getTotalQuantity() {
         //edit starts here
-        double total=0;
+        double totalQuantity=0;
         for(int i=0;i<items.size();i++){
-            total+=items.get(i).getQuantity();
-        }return total;
+            totalQuantity+=items.get(i).getQuantity();
+        }return totalQuantity;
         //edit ends here
     }
 
@@ -60,10 +60,10 @@ public class Order {
      */
     public double getGrandTotal() {
         //edit starts here
-        double grandTotal=0;
+        double overall=0;
         for(int i=0;i<items.size();i++){
-            grandTotal +=items.get(i).getAmount();
-        }return  grandTotal;
+            overall +=items.get(i).getAmount();
+        }return  overall;
         //edit ends here
     }
 }
