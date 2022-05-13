@@ -55,8 +55,12 @@ public class Order {
      */
     public double getGrandTotal() {
         //edit starts here
-        double value = items.size();
-        return value; //please remove
+        double value=0;
+        for (int i=0; i<items.size();i++){
+            value += items.get(i).getAmount();
+        }
+        return value;
+        //please remove
         //edit ends here
     }
 }
