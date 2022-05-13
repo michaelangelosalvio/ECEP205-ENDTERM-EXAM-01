@@ -20,7 +20,8 @@ public class Order {
      */
     public void addItem(Product product, double quantity) {
         //edit starts here
-
+        Item newProd = new Item(new Product("001", "ballpen, 20.0), 3);
+        items.add(newProd);
         //edit ends here
     }
 
@@ -31,7 +32,7 @@ public class Order {
      */
     public void removeItem(int index){
         //edit starts here
-
+        items.remove(index);
         //edit ends here
     }
 
@@ -42,7 +43,7 @@ public class Order {
      */
     public double getTotalQuantity() {
         //edit starts here
-        return 0; //please remove
+        return getTotalQuantity(); //please remove
         //edit ends here
     }
 
@@ -52,7 +53,8 @@ public class Order {
      */
     public double getGrandTotal() {
         //edit starts here
-        return 0; //please remove
+        double amount = items.size();
+        return amount; //please remove
         //edit ends here
     }
 }
