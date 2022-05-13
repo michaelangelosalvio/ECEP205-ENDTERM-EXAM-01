@@ -20,10 +20,10 @@ public class Order {
      */
     public void addItem(Product product, double quantity) {
         //edit starts here
-
+        Item item = new Item(product, quantity);
+        this.items.add(item);
         //edit ends here
     }
-
 
     /**
      * Remove an item from a given index.
@@ -31,7 +31,7 @@ public class Order {
      */
     public void removeItem(int index){
         //edit starts here
-
+        this.items.remove(index);
         //edit ends here
     }
 
@@ -42,7 +42,11 @@ public class Order {
      */
     public double getTotalQuantity() {
         //edit starts here
-        return 0; //please remove
+        double total=0;
+        for (int i=0; i<this.items.size(); i++){
+            total += items.get(i).quantity;
+        }
+        return total;
         //edit ends here
     }
 
@@ -52,7 +56,11 @@ public class Order {
      */
     public double getGrandTotal() {
         //edit starts here
-        return 0; //please remove
+        double grandTotal=0;
+        for (int i=0; i<items.size();i++){
+            grandTotal += items.get(i).amounts;
+        }
+        return grandTotal;
         //edit ends here
     }
 }
