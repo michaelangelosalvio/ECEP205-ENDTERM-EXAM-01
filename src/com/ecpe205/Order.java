@@ -10,6 +10,7 @@ public class Order {
     }
 
     public ArrayList<Item> getItems() {
+
         return items;
     }
 
@@ -20,7 +21,8 @@ public class Order {
      */
     public void addItem(Product product, double quantity) {
         //edit starts here
-
+        Item item_data = new Item(new Product("001", "Jackfruit", 10.0), 3);
+        items.add(item_data); //done
         //edit ends here
     }
 
@@ -31,7 +33,7 @@ public class Order {
      */
     public void removeItem(int index){
         //edit starts here
-
+        this.items.remove(index); //done
         //edit ends here
     }
 
@@ -42,7 +44,11 @@ public class Order {
      */
     public double getTotalQuantity() {
         //edit starts here
-        return 0; //please remove
+        double total=0;
+        for (int i=0; i<this.items.size(); i++){
+            total += items.get(i).getQuantity();
+        }
+        return total;
         //edit ends here
     }
 
@@ -52,7 +58,21 @@ public class Order {
      */
     public double getGrandTotal() {
         //edit starts here
-        return 0; //please remove
+        double grandTotal=0;
+        for (int i=0; i<items.size();i++){
+            grandTotal += items.get(i).getAmount();
+        }
+        return grandTotal;
         //edit ends here
+    }
+
+
+    @BeforeAll
+    void setup(){
+        ord = new Order();
+        ord.addItem(new Product("623", "frost", 5.0), 1);
+        ord.addItem(new Product("334", "bleed", 3.0), 5);
+        ord.addItem(new Product("145", "dead", 2.0), 2);
+        ord.addItem(new Product("633", "sad", 1.0), 4);
     }
 }
