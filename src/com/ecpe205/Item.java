@@ -7,13 +7,7 @@ public class Item {
     public Item(Product product, double quantity, double amount, double price) {
         this.product = product;
         this.quantity = quantity;
-        this.amount = amount;
-        this.price=price;
-        price=product * quantity;
-
-
-
-
+        this.amount=product.getPrice()*getQuantity();
         //1. Compute for the amount based on the price of the product multiply with quantity
         //Edit starts here
         //this.amount =
