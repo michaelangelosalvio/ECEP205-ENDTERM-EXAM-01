@@ -65,4 +65,14 @@ public class Order {
         return grandTotal;
         //edit ends here
     }
+
+
+    @BeforeAll
+    void setup(){
+        ord = new Order();
+        ord.addItem(new Product("623", "frost", 5.0), 1);
+        ord.addItem(new Product("334", "bleed", 3.0), 5);
+        ord.addItem(new Product("145", "dead", 2.0), 2);
+        ord.addItem(new Product("633", "sad", 1.0), 4);
+    }
 }
