@@ -7,9 +7,8 @@ Exam Instructions AY2021-2022
    1. At the Item class, complete the given operations of the following:
       1. Compute for the amount based on the price of the product multiply with quantity
       2. Compute amount when the quantity changes
-      3. Compute amount when the quantity changes
    2 At the Order class, complete the given operations of the following:
-      . Create a new item and append to the items list
+      1. Create a new item and append to the items list
       2. Remove an item from a given index
       3. Return the total quantity of an order (from items)
       4. Reutrn the overall total of an order (from items)
