@@ -7,7 +7,7 @@ Exam Instructions AY2021-2022
    1. At the Item class, complete the given operations of the following:
       1. Compute for the amount based on the price of the product multiply with quantity
       2. Compute amount when the quantity changes
-   2 At the Order class, complete the given operations of the following:
+   2. At the Order class, complete the given operations of the following:
       1. Create a new item and append to the items list
       2. Remove an item from a given index
       3. Return the total quantity of an order (from items)
@@ -15,9 +15,9 @@ Exam Instructions AY2021-2022
 4. Commit the changes
 5. Create a UnitTest Branch from the development branch, and do the following within the Unit Test Branch.
 6. Create a unit test for the Order class that will test the following methods
-   1 Create an item and check if the amount computed coincides with your expected computation
-   2 Create an item, then use setProduct to change the product, then check if the amount computed coincides with your expected computation
-   3 Create an item, then use setQuantity to change the quantity, then check if the amount computed coincides with your expected computation
+   1. Create an item and check if the amount computed coincides with your expected computation
+   2. Create an item, then use setProduct to change the product, then check if the amount computed coincides with your expected computation
+   3. Create an item, then use setQuantity to change the quantity, then check if the amount computed coincides with your expected computation
 7. Commit the changes and merge to the development branch
 8. Go back to UnitTest Branch and do the following:
    1. Create a Unit Test for the Order class
