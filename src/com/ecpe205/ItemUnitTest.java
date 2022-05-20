@@ -7,10 +7,6 @@ import org.junit.jupiter.api.TestInstance;
 
 class ItemUnitTest {
 
-    public static void main(String[] args) {
-
-        Item item1 = new Item();
-
 
 
     }
