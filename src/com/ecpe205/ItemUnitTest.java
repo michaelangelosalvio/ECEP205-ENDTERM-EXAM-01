@@ -14,7 +14,6 @@ class ItemUnitTest {
         // 6-1.
         Item item = new Item(new Product("11111","wagyu beef",2500),1);
         assertEquals(2500, item.getAmount());
-
         //6-2.
         Item item2 = new Item(new Product("22222","spaghetti",100),10);
         assertEquals(1000, item2.getAmount());
@@ -26,5 +25,6 @@ class ItemUnitTest {
         assertEquals(2,item3.getQuantity());
         item3.setQuantity(50);
         assertEquals(50, item3.getQuantity());
+
     }
 }
