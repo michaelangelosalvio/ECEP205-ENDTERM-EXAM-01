@@ -27,20 +27,21 @@ class OrderTest {
     void addItems(){
         // 8-3.
         order.setItem(new Product("12121","milk",45),4,3);
-        assertEquals(/* the total quantity */,order.getTotalQuantity());
-        assertEquals(/* the grand total */,order.getGrandTotal());
+        assertEquals(4 , order.getGrandTotal());
+        assertEquals(4 ,order.getGrandTotal());
 
 
     }
 
     @Test
-    removeItems(){
+    void removeItems(){
         // 8-4.
         order.removeItem(0);
         order.removeItem(1);
-        assertEquals(/* the total quantity */,order.getTotalQuantity());
-        assertEquals(/* the grand total */,order.getGrandTotal());
+        assertEquals(0 ,order.getTotalQuantity());
+        assertEquals(0 ,order.getGrandTotal());
     }
+
 
 
 
