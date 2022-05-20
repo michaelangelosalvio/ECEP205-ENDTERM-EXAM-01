@@ -17,46 +17,66 @@ public class Order {
 
     /**
      * Set the item on the given index
+     *
      * @param product
      * @param quantity
      * @param index
      */
     public void setItem(Product product, double quantity, int index) {
-        //edit starts here
 
+
+            //edit starts here
+            if (this.items[index] == null) this.items[index] = new Item(product, quantity);
+            //edit ends here
+        }
+
+
+        /**
+         * Sets the given index to null
+         * @param index
+         */
+        public void removeItem(int index){
+            //edit starts here
+            if (this.items[index] != null) this.items[index] = null;
+            //edit ends here
+        }
         //edit ends here
-    }
 
-
-    /**
-     * Sets the given index to null
-     * @param index
-     */
-    public void removeItem(int index){
-        //edit starts here
-
-
-        //edit ends here
-    }
 
 
     /**
      * Return the total quantity within an order
+     *
      * @return Total Quantity
      */
     public double getTotalQuantity() {
         //edit starts here
-        return 0; //please remove
+        double total = 0;
+        for (int i = 0; i< items.length; i++){
+            double a = this.items[i].getQuantity();
+            total +=a;
+        }
+
+        return total;
+
         //edit ends here
     }
 
     /**
      * Returns the overall total of all the items
+     *
      * @return Overall Total
      */
     public double getGrandTotal() {
         //edit starts here
-        return 0; //please remove
+        double total = 0;
+        for (int i = 0; i< items.length; i++){
+            double a = this.items[i].getAmount();
+            total +=a;
+        }
+
+        return getTotalQuantity();
+
         //edit ends here
     }
 }
