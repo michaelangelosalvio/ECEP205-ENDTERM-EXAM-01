@@ -1,3 +1,8 @@
+/*
+ * Colleen Ann Benedicto
+ * https://github.com/colesprojects/ECEP205-ENDTERM-EXAM-01
+ **/
+
 package com.ecpe205;
 
 public class Order {
@@ -23,13 +28,7 @@ public class Order {
      */
     public void setItem(Product product, double quantity, int index) {
         //edit starts here
-        /*
-        * if index is null, add  an item to that index
-        * if it is, don't add
-        */
-        if (this.items[index] == null) {
-            this.items[index] = new Item(product, quantity);
-        }
+        if (this.items[index] == null) this.items[index] = new Item(product, quantity);
         //edit ends here
     }
 
@@ -52,7 +51,11 @@ public class Order {
     public double getTotalQuantity() {
         //edit starts here
         double totalQuantity = 0;
-        for (Item e : this.items) totalQuantity += e.getQuantity();
+        for (Item e : this.items) {
+            if (e != null) {
+                totalQuantity += e.getQuantity();
+            }
+        }
         return totalQuantity;
         //edit ends here
     }
@@ -64,7 +67,11 @@ public class Order {
     public double getGrandTotal() {
         //edit starts here
         double grandTotal = 0;
-        for (Item e : this.items) grandTotal += e.getAmount();
+        for (Item e : this.items) {
+            if (e != null) {
+                grandTotal += e.getAmount();
+            }
+        }
         return grandTotal;
         //edit ends here
     }

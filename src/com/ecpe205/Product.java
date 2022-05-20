@@ -1,3 +1,8 @@
+/*
+ * Colleen Ann Benedicto
+ * https://github.com/colesprojects/ECEP205-ENDTERM-EXAM-01
+ **/
+
 package com.ecpe205;
 
 public class Product {
