@@ -11,7 +11,6 @@ import org.junit.jupiter.api.TestInstance;
 class OrderTest {
 
     Order order;
-
     @BeforeAll
     void list(){
 
@@ -22,7 +21,6 @@ class OrderTest {
         order.setItem(new Product("15151","Ponds",400),3,2);
 
     }
-
     @Test
     void addItems(){
         // 8-3.
@@ -30,9 +28,7 @@ class OrderTest {
         assertEquals(4 , order.getGrandTotal());
         assertEquals(4 ,order.getGrandTotal());
 
-
     }
-
     @Test
     void removeItems(){
         // 8-4.
