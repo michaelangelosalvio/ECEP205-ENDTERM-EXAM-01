@@ -33,4 +33,7 @@ public class Product {
     public void setPrice(double price) {
         this.price = price;
     }
+
+    //Gwynneth Gonzaga
+    // github link : https://github.com/gwynnethg/ECEP205-ENDTERM-EXAM-01.git
 }
