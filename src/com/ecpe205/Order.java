@@ -23,6 +23,9 @@ public class Order {
      */
     public void setItem(Product product, double quantity, int index) {
         //edit starts here
+        //product.add();
+        Item item= new Item(product,quantity);
+        this.items.add(item);
 
         //edit ends here
     }
@@ -34,6 +37,8 @@ public class Order {
      */
     public void removeItem(int index){
         //edit starts here
+        //index.remove();
+        this.items.remove(index);
 
 
         //edit ends here
@@ -46,7 +51,10 @@ public class Order {
      */
     public double getTotalQuantity() {
         //edit starts here
-        return 0; //please remove
+        double totalQuantity=0;
+        for(int i=0;i<items.size();i++){
+            totalQuantity+=items.get(i).getQuantity();
+        }return totalQuantity;
         //edit ends here
     }
 
@@ -56,7 +64,10 @@ public class Order {
      */
     public double getGrandTotal() {
         //edit starts here
-        return 0; //please remove
+        double overall=0;
+        for(int i=0;i<items.size();i++){
+            overall +=items.get(i).getAmount();
+        }return  overall;
         //edit ends here
     }
 }
