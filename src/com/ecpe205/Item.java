@@ -36,7 +36,7 @@ public class Item {
 
         //3. Compute amount when the quantity changes
         //Edit starts here
-        //this.amount =
+        this.amount = this.product.getPrice() * quantity;
         //Edit ends here
     }
 
