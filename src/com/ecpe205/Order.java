@@ -47,7 +47,7 @@ public class Order {
         //edit starts here
         double total=0;
         for (int i=0; i<this.items.length; i++){
-            total = items[i].getQuantity();
+            total += items[i].getQuantity();
         }
         return total;
 
