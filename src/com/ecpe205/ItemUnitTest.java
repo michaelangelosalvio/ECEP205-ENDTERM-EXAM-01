@@ -6,16 +6,14 @@ import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.TestInstance;
 
 
-
-
 @TestInstance(TestInstance.Lifecycle.PER_CLASS)
-class ItemTest {
+class ItemUnitTest {
     @Test
     void getAmount(){
 
         // 6-1.
-        Item item = new Item(new Product("11111","wagyu beef",2500),2);
-        assertEquals(5000, item.getAmount());
+        Item item = new Item(new Product("11111","wagyu beef",2500),1);
+        assertEquals(2500, item.getAmount());
 
         //6-2.
         Item item2 = new Item(new Product("22222","spaghetti",100),10);
