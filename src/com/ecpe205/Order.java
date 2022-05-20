@@ -42,7 +42,8 @@ public class Order {
      */
     public double getTotalQuantity() {
         //edit starts here
-        return 0; double total = 0;
+        return 0;
+        double total = 0;
         for (int i = 0; i< items.length; i++){
             double a = this.items[i].getQuantity();
             total +=a;
@@ -65,5 +66,8 @@ public class Order {
 
         return getGrandTotal();
         //edit ends here
+    }
+
+    public void addItem(Product itemA) {
     }
 }

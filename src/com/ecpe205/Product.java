@@ -4,10 +4,13 @@ public class Product {
     private String barcode, name;
     private double price;
 
-    public Product(String barcode) {
+    public Product(String barcode, String item, double v) {
         this.barcode = barcode;
         this.name = name;
         this.price = price;
+    }
+
+    public Product(String barcode, String item_d, int v, int i) {
     }
 
     public String getBarcode() {
