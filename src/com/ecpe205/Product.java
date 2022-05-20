@@ -10,6 +10,10 @@ public class Product {
         this.price = price;
     }
 
+    public Product(String item) {
+
+    }
+
     public String getBarcode() {
         return barcode;
     }
@@ -33,4 +37,6 @@ public class Product {
     public void setPrice(double price) {
         this.price = price;
     }
+
+
 }
