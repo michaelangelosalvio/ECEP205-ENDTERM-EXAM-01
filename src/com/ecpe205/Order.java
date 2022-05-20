@@ -75,7 +75,7 @@ public class Order {
             total +=a;
         }
 
-        return getTotalQuantity();
+        return getGrandTotal();
 
         //edit ends here
     }
