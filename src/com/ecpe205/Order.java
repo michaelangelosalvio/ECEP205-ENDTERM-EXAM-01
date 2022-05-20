@@ -67,6 +67,9 @@ public class Order {
         return items.length;
         //edit ends here
     }
+
+    public void addItem(Product chicken, int i) {
+    }
     //Gwynneth Gonzaga
     // github link : https://github.com/gwynnethg/ECEP205-ENDTERM-EXAM-01.git
 }
