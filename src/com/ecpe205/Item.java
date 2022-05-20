@@ -1,3 +1,8 @@
+/*
+* Colleen Ann Benedicto
+* https://github.com/colesprojects/ECEP205-ENDTERM-EXAM-01
+**/
+
 package com.ecpe205;
 
 public class Item {
@@ -10,7 +15,7 @@ public class Item {
 
         //1. Compute for the amount based on the price of the product multiply with quantity
         //Edit starts here
-        //this.amount =
+        this.amount = this.product.getPrice() * this.quantity;
         //Edit ends here
     }
 
@@ -23,7 +28,7 @@ public class Item {
 
         //2. Compute amount when the quantity changes
         //Edit starts here
-        //this.amount =
+        this.amount = this.product.getPrice() * this.quantity;
         //Edit ends here
     }
 
@@ -36,7 +41,7 @@ public class Item {
 
         //3. Compute amount when the quantity changes
         //Edit starts here
-        //this.amount =
+        this.amount = this.product.getPrice() * this.quantity;
         //Edit ends here
     }
 
