@@ -23,7 +23,7 @@ class ItemTest {
 
     @Test
     @DisplayName("Test if total amount is correct after changing item quantity")
-    void shouldComputeCorrectTottalAfterQuantityChange() {
+    void shouldComputeCorrectTotalAfterQuantityChange() {
         Item item1 = new Item(new Product("S001", "Coco Crunch", 50), 3);
         item1.setQuantity(5);
         assertEquals(250, item1.getProduct().getPrice() * item1.getQuantity());
