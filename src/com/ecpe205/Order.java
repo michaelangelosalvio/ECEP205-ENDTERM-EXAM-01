@@ -57,11 +57,13 @@ public class Order {
      */
     public double getGrandTotal() {
         //edit starts here
-        return 0; double temp = getGrandTotal();
-        if(getGrandTotal() != temp){
-            temp = temp + getGrandTotal();
+        double total = 0;
+        for (int i = 0; i< items.length; i++){
+            double a = this.items[i].getAmount();
+            total +=a;
         }
-        return (temp);
+
+        return getGrandTotal();
         //edit ends here
     }
 }
