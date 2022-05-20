@@ -1,7 +1,6 @@
 package com.ecpe205;
 
 
-import java.util.List;
 
 public class Order {
     private Item[] items;
@@ -37,7 +36,7 @@ public class Order {
      */
     public void removeItem(int index){
         //edit starts here
-        List.of(this.items[index]).remove(index);
+        items[index].setQuantity(0);
         //edit ends here
     }
 
@@ -66,7 +65,7 @@ public class Order {
         //edit starts here
         double price = 0;
         for(int i = 0; i < items.length; i++) {
-            price += items[0].getAmount();
+            price += items[i].getAmount();
         }
         return price;
         //edit ends here
