@@ -17,27 +17,28 @@ public class Order {
 
     /**
      * Set the item on the given index
+     *
      * @param product
      * @param quantity
      * @param index
      */
     public void setItem(Product product, double quantity, int index) {
         //edit starts here
-
+        if (this.items[index] == null) this.items[index] = new Item(product, quantity);
         //edit ends here
     }
-
 
     /**
      * Sets the given index to null
+     *
      * @param index
      */
+
     public void removeItem(int index){
         //edit starts here
-
-
+        if (this.items[index] !=null) this.items[index] = null;
+        }
         //edit ends here
-    }
 
 
     /**
@@ -46,7 +47,11 @@ public class Order {
      */
     public double getTotalQuantity() {
         //edit starts here
-        return 0; //please remove
+        double total =0; for (int i = 0; i<items.length; i++){
+            double a= this.items[i].getQuantity();total +=a;
+        }
+
+        return total;
         //edit ends here
     }
 
@@ -56,7 +61,13 @@ public class Order {
      */
     public double getGrandTotal() {
         //edit starts here
-        return 0; //please remove
+        double total = 0;
+        for (int i = 0; i< items.length; i++){
+            double a = this.items[i].getAmount();
+            total +=a;
+        }
+
+        return getGrandTotal();
         //edit ends here
     }
 }
