@@ -1,5 +1,5 @@
 package com.ecpe205;
-
+// Argie Donio ---> https://github.com/argied/ECEP205-ENDTERM-EXAM-01
 public class Product {
     private String barcode, name;
     private double price;
