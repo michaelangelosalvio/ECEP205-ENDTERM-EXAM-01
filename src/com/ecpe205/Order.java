@@ -1,5 +1,7 @@
 package com.ecpe205;
 
+import java.util.List;
+
 public class Order {
     private Item[] items;
 
@@ -24,6 +26,8 @@ public class Order {
     public void setItem(Product product, double quantity, int index) {
         //edit starts here
 
+        this.items[index] = new Item(product, quantity);
+
         //edit ends here
     }
 
@@ -34,6 +38,8 @@ public class Order {
      */
     public void removeItem(int index){
         //edit starts here
+
+        List.of(items[index]).remove(index);
 
 
         //edit ends here
@@ -46,7 +52,15 @@ public class Order {
      */
     public double getTotalQuantity() {
         //edit starts here
-        return 0; //please remove
+
+        double total = 0;
+        for (int i = 0; i< items.length; i++){
+            double a = items[i].getQuantity();
+            total +=a;
+        }
+
+        return total;
+
         //edit ends here
     }
 
@@ -56,7 +70,9 @@ public class Order {
      */
     public double getGrandTotal() {
         //edit starts here
-        return 0; //please remove
+
+        return items.length;
+
         //edit ends here
     }
 }
