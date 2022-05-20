@@ -60,11 +60,11 @@ public class Order {
      */
     public double getGrandTotal() {
         //edit starts here
-        double grandTotal=0;
+        double grandtotal=0;
         for (int i=0; i<items.length;i++){
-            grandTotal += items[i].getAmount();
+            grandtotal += items[i].getAmount();
         }
-        return grandTotal;
+        return grandtotal;
         //edit ends here
     }
 }
